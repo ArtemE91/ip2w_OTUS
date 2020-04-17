@@ -1,0 +1,10 @@
+---
+ip2w:
+  timeout: 10
+  log_path: /var/log/ip2w/ip2w.log
+
+ipinfo:
+  access_token: 1234567890abc
+
+openweathermap:
+  appid: 1234567890abc
