@@ -12,7 +12,7 @@ Requires(post): systemd
 Requires(preun): systemd
 Requires(postun): systemd
 BuildRequires: systemd
-Requires:	systemd, nginx, uwsgi, pthon3
+Requires:	systemd, nginx, uwsgi, python3
 Summary:  rpm package to serve ip to weather.
 
 
@@ -35,10 +35,10 @@ Git version: %{git_version} (branch: %{git_branch})
 %{__mkdir} -p %{buildroot}/%{__logdir}
 %{__mkdir} -p %{buildroot}/%{__bindir}
 %{__install} -pD -m 644  %{name}.service %{buildroot}/%{__systemddir}/%{name}.service
-%{__install} -pD -m 644  app/%{name}.py %{buildroot}/%{__bindir}/%{name}.py
+%{__install} -pD -m 644  %{name}.py %{buildroot}/%{__bindir}/%{name}.py
 %{__install} -pD -m 644  %{name}.uwsgi.ini %{buildroot}/%{__bindir}/%{name}.uwsgi.ini
 %{__install} -pD -m 644  %{name}.nginx.conf %{buildroot}/%{__nginxconf}/%{name}.nginx.conf
-%{__install} -pD -m 644  %{name}.ini %{buildroot}/%{__etcdir}/%{name}.yml
+%{__install} -pD -m 644  %{name}.yml %{buildroot}/%{__etcdir}/%{name}.yml
 
 %post
 %systemd_post %{name}.service
