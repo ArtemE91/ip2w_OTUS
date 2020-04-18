@@ -2,7 +2,6 @@
 
 Traing uwsgi daemon project.
 Upon request, IPv4 returns the current weather in the city to which ip belongs.
-
 The following parameters must be added to the config. 
 After unpacking the rpm package, the config is located in /usr/local/etc/ip2w.yml.
 ```
