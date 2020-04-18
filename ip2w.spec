@@ -12,7 +12,7 @@ Requires(post): systemd
 Requires(preun): systemd
 Requires(postun): systemd
 BuildRequires: systemd
-Requires:	systemd, nginx, uwsgi, python3
+Requires:	systemd, nginx, python3
 Summary:  rpm package to serve ip to weather.
 
 
