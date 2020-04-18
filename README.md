@@ -58,4 +58,21 @@ openweathermap:
  * __log:__ `/var/log/ip2w/ip2w.log`
  
  
+ ## How to run tests
  
+ * __units:__ `(venv) python -m pytest tests/units/test.py `
+ * __integration:__ `(venv) python -m pytest tests/integrations/application_test.py`
+ 
+ ### Example
+ ```
+ # integration - python -m pytest tests/integrations/application_test.py 
+ (venv) mbp-user:ip2w_OTUS user$ python -m pytest tests/units/test.py 
+============================================================================== test session starts ==============================================================================
+platform darwin -- Python 3.7.3, pytest-5.4.1, py-1.8.1, pluggy-0.13.1
+rootdir: /Users/user/PycharmProjects/ip2w_OTUS
+collected 10 items                                                                                                                                                              
+
+tests/units/test.py ..........                                                                                                                                            [100%]
+
+============================================================================== 10 passed in 36.98s ==============================================================================
+```
