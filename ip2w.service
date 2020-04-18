@@ -2,7 +2,7 @@
 Description=uWSGI instance to serve ip2w
 
 [Service]
-ExecStartPre=-/usr/bin/bash -c 'mkdir -p /run/uwsgi; chown temik:nginx /run/uwsgi'
+ExecStartPre=-/usr/bin/bash -c 'mkdir -p /run/uwsgi; chown temik:nginx /run/uwsgi; chown temik:nginx /var/log/ip2w;'
 ExecStart=/usr/bin/bash -c 'cd /usr/local/ip2w; uwsgi --ini ip2w.uwsgi.ini'
 
 [Install]

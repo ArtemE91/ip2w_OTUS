@@ -21,7 +21,7 @@ Traing uwsgi daemon project. Upon request, IPv4 returns the current weather in t
 Git version: %{git_version} (branch: %{git_branch})
 
 %define __etcdir    /usr/local/etc
-%define __logdir    /val/log/ip2w
+%define __logdir    /var/log/ip2w
 %define __bindir    /usr/local/ip2w
 %define __systemddir	/usr/lib/systemd/system
 %define __nginxconf /etc/nginx/conf.d
@@ -38,7 +38,7 @@ Git version: %{git_version} (branch: %{git_branch})
 %{__install} -pD -m 644  %{name}.yml %{buildroot}/%{__etcdir}/%{name}.yml
 
 %{__mkdir} -p %{buildroot}/%{__logdir}
-%{__install} -pD -m 644  %{name}.log %{buildroot}/%{__logdir}/%{name}.log
+%{__install} -pD -m 666  /dev/null %{buildroot}/%{__logdir}/%{name}.log
 
 %{__mkdir} -p %{buildroot}/%{__bindir}
 %{__install} -pD -m 644  %{name}.py %{buildroot}/%{__bindir}/%{name}.py
